@@ -68,8 +68,12 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :poetic, Poetic.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "icicle",
+  password: "macro129",
   database: "poetic_dev",
   hostname: "localhost",
   pool_size: 10
+
+
+  config :poetic,
+  uploads_directory: "/Users/nidhisarvaiya/mywork/uploads_dev"
