@@ -16,5 +16,9 @@ defmodule Poetic.Documents.Upload do
     upload
     |> cast(attrs, [:filename, :size, :content_type, :hash])
     |> validate_required([:filename, :size, :content_type, :hash])
+
+    # added validations
+    |> validate_number(:size, greater_than: 0) #doesn't allow empty files
+    |> validate_length(:hash, is: 64)
   end
 end
